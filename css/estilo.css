@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.caja1{
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    width: 90%;
+    height: 220px;
+}
+.caja2{
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    width: 90%;
+    height: 220px;
+}
+.caja3{
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    width: 90%;
+    height: 380px;
+    background-color: rgb(156, 206, 75);
+}
+.caja01{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.caja02{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+.logo{
+    display: flex;
+    width: 200px;
+    height: 70px;
+    margin: 0 auto;
+    background-color: rgb(106, 103, 109);
+}
+.caja01 input{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+.caja02 input{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+.caja02 table tr td button{
+    display: flex;
+    padding: 5px;
+    margin: auto;
+}
+.caja02 table{
+    margin-top: 50px;
+}
