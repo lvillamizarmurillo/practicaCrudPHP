@@ -20,7 +20,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/stilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Registro</title>
 </head>
@@ -63,7 +63,48 @@
             </div>
         </div>
         <div class="caja3">
-
+            <table>
+                <tr>
+                    <td><p>Nombre</p></td>
+                    <td><p>apellido</p></td>
+                    <td><p>direccion</p></td>
+                    <td><p>edad</p></td>
+                    <td><p>email</p></td>
+                    <td><p>horario de entrada</p></td>
+                    <td><p>team</p></td>
+                    <td><p>trainer</p></td>
+                </tr>
+                <tr>
+                    <td><p>San</p></td>
+                    <td><p>Chun</p></td>
+                    <td><p>123</p></td>
+                    <td><p>23</p></td>
+                    <td><p>akjsdkj@gmail.com</p></td>
+                    <td><p>12:00pm</p></td>
+                    <td><p>m3</p></td>
+                    <td><p>Miguel</p></td>
+                </tr>
+                <tr>
+                    <td><p>San</p></td>
+                    <td><p>Chun</p></td>
+                    <td><p>123</p></td>
+                    <td><p>23</p></td>
+                    <td><p>akjsdkj@gmail.com</p></td>
+                    <td><p>12:00pm</p></td>
+                    <td><p>m3</p></td>
+                    <td><p>Miguel</p></td>
+                </tr>
+                <tr>
+                    <td><p>San</p></td>
+                    <td><p>Chun</p></td>
+                    <td><p>123</p></td>
+                    <td><p>23</p></td>
+                    <td><p>akjsdkj@gmail.com</p></td>
+                    <td><p>12:00pm</p></td>
+                    <td><p>m3</p></td>
+                    <td><p>Miguel</p></td>
+                </tr>
+            </table>
         </div>
     </div>
 </body>
