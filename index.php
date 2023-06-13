@@ -20,9 +20,11 @@
     };
     if(isset($_POST["registrar"])){
         guardar();
+        header("location: http://localhost/SkylAb-112/practicaCrudPHP/");
     }else{
         echo "no se ha guardado nada";
     };
+    var_dump($_POST["registrar"]);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -36,7 +38,7 @@
 </head>
 <body>
     <div class="container">
-        <form method="POST">
+        <form method="POST" action="">
             <div class="caja1">
                 <div class="caja01">
                         <input type="text" name="nombre" placeholder="Nombre">
