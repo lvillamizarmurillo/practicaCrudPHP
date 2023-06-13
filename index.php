@@ -18,8 +18,10 @@
         $config = stream_context_create($credenciales);
         $_DATA = file_get_contents("https://6480e390f061e6ec4d49febe.mockapi.io/informacion", false, $config);
     };
-    if(isset($_POST['chulo'])){
+    if(isset($_POST["registrar"])){
         guardar();
+    }else{
+        echo "no se ha guardado nada";
     };
 ?>
 <!DOCTYPE html>
@@ -58,12 +60,12 @@
                 <div class="caja02">
                     <table>
                         <tr>
-                            <td><button type="submit" name="chulo" value="chulo"><i class="fa-solid fa-check"></i></button></td>
-                            <td><button type="submit" name="equis" value="equis"><i class="fa-solid fa-x"></i></button></td>
+                            <td><button type="submit" name="registrar">chulo</button></td>
+                            <td><button type="submit" name="equis"><i class="fa-solid fa-x"></i></button></td>
                         </tr>
                         <tr>
-                            <td><button type="submit" name="lapiz" value="lapiz"><i class="fa-sharp fa-solid fa-pen"></i></button></td>
-                            <td><button type="submit" name="lupa" value="buscar"><i class="fa-solid fa-magnifying-glass"></i></button><br></td>
+                            <td><button type="submit" name="lapiz"><i class="fa-sharp fa-solid fa-pen"></i></button></td>
+                            <td><button type="submit" name="lupa"><i class="fa-solid fa-magnifying-glass"></i></button><br></td>
                         </tr>
                         <tr>
                             <td colspan="2"><input type="text" name="cedula" placeholder="Cedula"></td>
@@ -85,39 +87,27 @@
                     <td><h4><p>trainer</p></h4></td>
                     <td><h4><p>flecha</p></h4></td>
                 </tr>
-                <tr>
-                    <td><p>San</p></td>
-                    <td><p>Chun</p></td>
-                    <td><p>123</p></td>
-                    <td><p>23</p></td>
-                    <td><p>akjsdkj@gmail.com</p></td>
-                    <td><p>12:00pm</p></td>
-                    <td><p>m3</p></td>
-                    <td><p>Miguel</p></td>
-                    <td><button>▲</button></td>
-                </tr>
-                <tr>
-                    <td><p>San</p></td>
-                    <td><p>Chun</p></td>
-                    <td><p>123</p></td>
-                    <td><p>23</p></td>
-                    <td><p>akjsdkj@gmail.com</p></td>
-                    <td><p>12:00pm</p></td>
-                    <td><p>m3</p></td>
-                    <td><p>Miguel</p></td>
-                    <td><button>▲</button></td>
-                </tr>
-                <tr>
-                    <td><p>San</p></td>
-                    <td><p>Chun</p></td>
-                    <td><p>123</p></td>
-                    <td><p>23</p></td>
-                    <td><p>akjsdkj@gmail.com</p></td>
-                    <td><p>12:00pm</p></td>
-                    <td><p>m3</p></td>
-                    <td><p>Miguel</p></td>
-                    <td><button>▲</button></td>
-                </tr>
+                <?php
+                    $credenciales["http"]["method"] = "GET";
+                    $credenciales["http"]["header"] = "Content-type: application/json";
+                    $config = stream_context_create($credenciales);
+                    $_DATA = file_get_contents("https://6480e390f061e6ec4d49febe.mockapi.io/informacion", false, $config);
+                    $res = json_decode($_DATA,true);
+                    foreach($res as $clave=>$valor){
+                        echo 
+                        "<tr>".
+                        "<td><h4><p>".$res[$clave]['nombre']."</p></h4></td>".
+                        "<td><h4><p>".$res[$clave]['apellido']."</p></h4></td>".
+                        "<td><h4><p>".$res[$clave]['direccion']."</p></h4></td>".
+                        "<td><h4><p>".$res[$clave]['edad']."</p></h4></td>".
+                        "<td><h4><p>".$res[$clave]['email']."</p></h4></td>".
+                        "<td><h4><p>".$res[$clave]['horario']."</p></h4></td>".
+                        "<td><h4><p>".$res[$clave]['team']."</p></h4></td>".
+                        "<td><h4><p>".$res[$clave]['trainer']."</p></h4></td>".
+                        "<td><button>▲</button></td>".
+                        "</tr>";
+                    }
+                ?>
             </table>
         </div>
     </div>
